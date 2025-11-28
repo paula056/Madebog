@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(240, 234, 228);
+}
+
+.Titulo {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 30px;
+}
+
+
+.slider-box {
+    width: 60%;                 
+    max-width: 900px;
+    height: 250px;               
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 0 15px rgba(204, 68, 68, 0.3);
+}
+
+.slider-box ul {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    animation: slide 18s ease-in-out infinite alternate;
+}
+
+.slider-box li {
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+
+.slider-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       
+}
+
+
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    color: rgb(231, 218, 218);
+    text-shadow: 0 0 8px #df4141ea;
+}
+
+.texto h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.texto p {
+    font-size: 16px;
+}
+
+/* ANIMACIÓN */
+@keyframes slide {
+    0%   { margin-left: 0; }
+    20%  { margin-left: 0; }
+
+    25%  { margin-left: -100%; }
+    45%  { margin-left: -100%; }
+
+    50%  { margin-left: -200%; }
+    70%  { margin-left: -200%; }
+
+    75%  { margin-left: -300%; }
+    100% { margin-left: -300%; }
+}
+
+
+@media (max-width: 800px) {
+    .slider-box {
+        width: 90%;
+        height: 180px;
+    }
+
+    .texto h2 {
+        font-size: 20px;
+    }
+
+    .texto p {
+        font-size: 14px;
+    }
+}
+
+.contenedor-boton {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.boton-wsp {
+    background-color: #25D366;  /* color WhatsApp */
+    color: white;
+    padding: 12px 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+}
+
+.boton-wsp:hover {
+    background-color: #1ebe5f;
+    transform: scale(1.05);
+}
